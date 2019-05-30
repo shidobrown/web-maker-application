@@ -54,7 +54,7 @@ export default class WebsiteList extends Component {
                 </section>
                 <nav className="navbar navbar-dark bg-primary fixed-bottom">
                     <Link to={`/user/${uid}`}>
-                        <i className="fas fa-user" />
+                        <i className="fas fa-ninja" />
                     </Link>
                 </nav>
             </div>

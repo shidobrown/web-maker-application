@@ -1,6 +1,7 @@
 module.exports = function(app) {
 
     const widgets = [];
+
     // Find all widgets by given page id
     app.get('/api/page/:pid/widget', (req, res) => {
       const pid = req.params['pid'];
@@ -28,6 +29,7 @@ module.exports = function(app) {
     // update Widget
     app.put('/api/widget', (req, res) => {
       const newWidget = req.body;
+      // eslint-disable-next-line no-const-assign
       widgets = widgets.map(widget => {
         if (widget._id === newWidget._id) {
           widget = newWidget;

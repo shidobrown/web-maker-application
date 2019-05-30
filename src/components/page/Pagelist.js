@@ -76,7 +76,7 @@ export default class PageList extends Component {
                             className="color-black float-right"
                             to={`/user/${uid}`}
                         >
-                            <i className="fas fa-user" />
+                            <i className="fas fa-ninja" />
                         </Link>
                     </div>
                 </footer>

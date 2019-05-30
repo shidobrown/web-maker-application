@@ -185,7 +185,7 @@ export default class WebsiteEdit extends Component {
                             className="color-white float-right"
                             to={`/user/${uid}`}
                         >
-                            <i className="fas fa-user" />
+                            <i className="fas fa-ninja" />
                         </Link>
                     </div>
                 </nav>

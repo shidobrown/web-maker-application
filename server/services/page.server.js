@@ -7,15 +7,19 @@ module.exports = function(app) {
       const websites = await pageModel.findAllPagesForWebsite(wid);
       res.json(websites);
     });
+
   
-    // Adding new page
+    // Adding new page for user
     app.post('/api/page', async (req, res) => {
       const newPage = req.body;
       const data = await pageModel.createPage(newPage);
       res.json(data);
     });
+
+
+
   
-    // Get page by given id
+    // grab page by id
     app.get('/api/page/:pid', async (req, res) => {
       const pid = req.params['pid'];
       const page = await pageModel.findPageById(pid);
