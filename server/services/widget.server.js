@@ -1,7 +1,10 @@
 module.exports = function(app) {
+
+    const widgets = [];
     // Find all widgets by given page id
     app.get('/api/page/:pid/widget', (req, res) => {
       const pid = req.params['pid'];
+      // eslint-disable-next-line no-undef
       const result = widgets.filter(widget => {
         return widget.pageId === pid;
       });
