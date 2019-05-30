@@ -1,26 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
-
-export default App;
+module.exports = function(app) {
+  require('./models/models.server');
+  require('./services/user.server')(app);
+  require('./services/website.server')(app);
+  require('./services/page.server')(app);
+  require('./services/widget.server')(app);
+};
