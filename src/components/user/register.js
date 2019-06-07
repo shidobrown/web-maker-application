@@ -24,7 +24,7 @@ export default class Register extends Component {
     async register(username, password, password2) {
         // Does passwords match
         if(password !== password2) {
-            alert("The passwords are not match");
+            alert("The passwords do not match");
             return;
         }
 
@@ -87,11 +87,10 @@ export default class Register extends Component {
                         />
                     </div>
                     <button
-                        className="btn btn-primary btn-block"
-                    >
-                        Register
+                     className="btn btn-primary btn-block">
+                     Register
                     </button>
-                    <Link className="btn btn-danger btn-block" to="/login">
+                   <Link className="btn btn-danger btn-block" to="/login">
                         Cancel
                     </Link>
                 </form>
